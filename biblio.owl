@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.org/biblio#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/biblio#appartientA">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Auteur">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Lecteur">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Categorie">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreBD">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Dupont"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreIA">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Dupont"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#emprunte">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Informatique">
+    <rdf:type rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Dupont">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Personne">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Bibliothecaire">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Karim">
+    <rdf:type rdf:resource="http://example.org/biblio#Lecteur"/>
+    <ex:emprunte rdf:resource="http://example.org/biblio#LivreIA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#ecritPar">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Livre">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>

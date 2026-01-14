@@ -1,0 +1,4 @@
+Titre : IA Avancée
+Approfondissement des réseaux de neurones, deep learning et systèmes experts.
+Auteur : Dupont
+Catégorie : Informatique
