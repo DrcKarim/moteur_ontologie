@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche par Catégorie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Recherche par Catégorie</h1>
+        
+        <form action="/results-category" method="POST">
+            <label for="categorie">Nom de la catégorie (ex: Informatique) :</label>
+            <input type="text" id="categorie" name="categorie" required placeholder="Entrez le nom de la catégorie">
+            <button type="submit">Rechercher</button>
+        </form>
+        
+        <a href="/">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bibliothèque - Recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Système de Recherche Bibliothèque</h1>
+        <p>Choisissez une option de recherche :</p>
+        
+        <div class="button-container">
+            <form action="/search-category" method="GET">
+                <button type="submit">📚 Rechercher des livres par catégorie</button>
+            </form>
+            <form action="/search-user" method="GET">
+                <button type="submit">👤 Rechercher des livres empruntés par un utilisateur</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

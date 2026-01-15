@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche par Utilisateur</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>👤 Recherche par Utilisateur</h1>
+        
+        <form action="/results-user" method="POST">
+            <label for="lecteur">Nom de l'utilisateur (ex: Karim) :</label>
+            <input type="text" id="lecteur" name="lecteur" required placeholder="Entrez le nom de l'utilisateur">
+            <button type="submit">Rechercher</button>
+        </form>
+        
+        <a href="/">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>

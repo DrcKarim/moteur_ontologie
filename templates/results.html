@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultats de Recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Résultats de Recherche</h1>
+        
+        <div class="results-info">
+            <p><strong>Type de recherche :</strong> {{ query_type }}</p>
+            <p><strong>Recherche pour :</strong> {{ search_term }}</p>
+        </div>
+        
+        <hr>
+        
+        {% if error %}
+            <div class="error">❌ {{ error }}</div>
+        {% elif results %}
+            <h2>Livres trouvés (<span class="count">{{ results|length }}</span>) :</h2>
+            <ul>
+            {% for livre in results %}
+                <li>{{ livre }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <div class="warning">⚠️ Aucun livre trouvé.</div>
+        {% endif %}
+        
+        <a href="/">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
