@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from rdflib import Graph, Namespace
+import os
 
 app = Flask(__name__)
 
@@ -7,6 +8,27 @@ app = Flask(__name__)
 EX = Namespace("http://example.org/biblio#")
 g = Graph()
 g.parse("biblio.owl", format="xml")
+
+def get_book_info(livre_id):
+    """Get book title and file path from book ID"""
+    file_path = f"pages/livre_{livre_id.lower()}.txt"
+    
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip()
+            # Extract title from "Titre: <title>"
+            if first_line.startswith("Titre: "):
+                titre = first_line.replace("Titre: ", "")
+                return {
+                    'titre': titre,
+                    'fichier': file_path
+                }
+    
+    # Fallback if file doesn't exist
+    return {
+        'titre': livre_id,
+        'fichier': '(fichier introuvable)'
+    }
 
 @app.route('/')
 def home():
@@ -45,8 +67,8 @@ def results_category():
     
     results = []
     for row in g.query(q):
-        livre_name = row.livre.split("#")[-1]
-        results.append(livre_name)
+        livre_id = row.livre.split("#")[-1]
+        results.append(get_book_info(livre_id))
     
     return render_template('results.html', 
                          query_type="Catégorie", 
@@ -74,8 +96,8 @@ def results_user():
     
     results = []
     for row in g.query(q):
-        livre_name = row.livre.split("#")[-1]
-        results.append(livre_name)
+        livre_id = row.livre.split("#")[-1]
+        results.append(get_book_info(livre_id))
     
     return render_template('results.html', 
                          query_type="Utilisateur", 

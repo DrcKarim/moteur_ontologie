@@ -1,0 +1,6 @@
+Titre: Java Enterprise Edition
+Auteur: Lambert
+Catégorie: Programmation
+
+Description:
+Développez des applications d'entreprise robustes avec Java EE. Servlets, JSP, EJB et frameworks modernes pour créer des systèmes évolutifs.

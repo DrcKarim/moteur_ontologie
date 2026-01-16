@@ -1,0 +1,6 @@
+Titre: Cloud Computing et DevOps
+Auteur: Martin
+Catégorie: Systemes
+
+Description:
+Découvrez AWS, Azure et les pratiques DevOps modernes. Automatisation, containers Docker, Kubernetes et CI/CD pour déploiements efficaces.

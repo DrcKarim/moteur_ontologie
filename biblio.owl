@@ -4,15 +4,111 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://example.org/biblio#appartientA">
+  <rdf:Description rdf:about="http://example.org/biblio#LivreCloud">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Martin"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Systemes"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Dubois">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#DataScience">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Programmation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Karim">
+    <rdf:type rdf:resource="http://example.org/biblio#Lecteur"/>
+    <ex:emprunte rdf:resource="http://example.org/biblio#LivreIA"/>
+    <ex:emprunte rdf:resource="http://example.org/biblio#LivrePython"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Bibliothecaire">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#IntelligenceArtificielle">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#ecritPar">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#Auteur">
+  <rdf:Description rdf:about="http://example.org/biblio#Cybersecurite">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreDataScience">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Rousseau"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#DataScience"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreIA">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Dupont"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#IntelligenceArtificielle"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreJava">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Lambert"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Programmation"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Personne">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreReseaux">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Petit"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Reseaux"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/biblio#Lecteur">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://example.org/biblio#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#emprunte">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#appartientA">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreCyber">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Bernard"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Cybersecurite"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Livre">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Systemes">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#BasesDeDonnees">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreLinux">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Fontaine"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Systemes"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Rousseau">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivrePython">
+    <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Dubois"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Programmation"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/biblio#Categorie">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -20,37 +116,41 @@
   <rdf:Description rdf:about="http://example.org/biblio#LivreBD">
     <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
     <ex:ecritPar rdf:resource="http://example.org/biblio#Dupont"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#BasesDeDonnees"/>
     <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#LivreIA">
+  <rdf:Description rdf:about="http://example.org/biblio#Bernard">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#LivreML">
     <rdf:type rdf:resource="http://example.org/biblio#Livre"/>
-    <ex:ecritPar rdf:resource="http://example.org/biblio#Dupont"/>
+    <ex:ecritPar rdf:resource="http://example.org/biblio#Martin"/>
+    <ex:appartientA rdf:resource="http://example.org/biblio#IntelligenceArtificielle"/>
     <ex:appartientA rdf:resource="http://example.org/biblio#Informatique"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#emprunte">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.org/biblio#Informatique">
     <rdf:type rdf:resource="http://example.org/biblio#Categorie"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Reseaux">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Categorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Martin">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://example.org/biblio#Dupont">
     <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#Personne">
+  <rdf:Description rdf:about="http://example.org/biblio#Petit">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Lambert">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/biblio#Auteur">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#Bibliothecaire">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.org/biblio#Personne"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#Karim">
-    <rdf:type rdf:resource="http://example.org/biblio#Lecteur"/>
-    <ex:emprunte rdf:resource="http://example.org/biblio#LivreIA"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#ecritPar">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/biblio#Livre">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  <rdf:Description rdf:about="http://example.org/biblio#Fontaine">
+    <rdf:type rdf:resource="http://example.org/biblio#Auteur"/>
   </rdf:Description>
 </rdf:RDF>

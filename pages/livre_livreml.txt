@@ -1,0 +1,6 @@
+Titre: Machine Learning Pratique
+Auteur: Martin
+Catégorie: IntelligenceArtificielle
+
+Description:
+Apprenez le machine learning avec des exemples concrets et des projets pratiques. Des algorithmes supervisés aux techniques de deep learning, en passant par l'évaluation des modèles.

@@ -1,0 +1,6 @@
+Titre: Bases de Données Relationnelles
+Auteur: Dupont
+Catégorie: BasesDeDonnees
+
+Description:
+Guide complet sur les systèmes de gestion de bases de données relationnelles. Couvre SQL, la normalisation, et l'optimisation des requêtes pour des performances maximales.

@@ -1,9 +1,25 @@
 from rdflib import Graph, Namespace
+import os
 
 EX = Namespace("http://example.org/biblio#")
 
 g = Graph()
 g.parse("biblio.owl", format="xml")
+
+def get_book_info(livre_id):
+    """Get book title and file path from book ID"""
+    file_path = f"pages/livre_{livre_id.lower()}.txt"
+    
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip()
+            # Extract title from "Titre: <title>"
+            if first_line.startswith("Titre: "):
+                titre = first_line.replace("Titre: ", "")
+                return f"{titre} → {file_path}"
+    
+    # Fallback if file doesn't exist
+    return f"{livre_id} → (fichier introuvable)"
 
 def livres_par_categorie(categorie):
     """Search books by category"""
@@ -18,7 +34,8 @@ def livres_par_categorie(categorie):
     results = list(g.query(q))
     if results:
         for row in results:
-            print("-", row.livre.split("#")[-1])
+            livre_id = row.livre.split("#")[-1]
+            print("-", get_book_info(livre_id))
     else:
         print("Aucun livre trouvé pour cette catégorie.")
 
@@ -34,7 +51,8 @@ def livres_empruntes_par(lecteur):
     results = list(g.query(q))
     if results:
         for row in results:
-            print("-", row.livre.split("#")[-1])
+            livre_id = row.livre.split("#")[-1]
+            print("-", get_book_info(livre_id))
     else:
         print("Aucun livre trouvé pour cet utilisateur.")
 

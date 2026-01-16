@@ -21,7 +21,9 @@
             <h2>Livres trouvés (<span class="count">{{ results|length }}</span>) :</h2>
             <ul>
             {% for livre in results %}
-                <li>{{ livre }}</li>
+                <li>
+                    <strong>{{ livre.titre }}</strong> → <em>{{ livre.fichier }}</em>
+                </li>
             {% endfor %}
             </ul>
         {% else %}

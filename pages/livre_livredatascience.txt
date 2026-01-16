@@ -1,0 +1,6 @@
+Titre: Data Science avec Python
+Auteur: Rousseau
+Catégorie: DataScience
+
+Description:
+Maîtrisez l'analyse de données avec Python, pandas, numpy et matplotlib. Des techniques de visualisation aux modèles prédictifs, tout pour devenir data scientist.

@@ -1,0 +1,6 @@
+Titre: Introduction à l'Intelligence Artificielle
+Auteur: Dupont
+Catégorie: IntelligenceArtificielle
+
+Description:
+Ce livre explore les fondements de l'IA, depuis les algorithmes de base jusqu'aux réseaux de neurones. Une introduction complète pour comprendre les enjeux et applications modernes de l'intelligence artificielle.

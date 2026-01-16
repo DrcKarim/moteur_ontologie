@@ -1,0 +1,6 @@
+Titre: Administration Système Linux
+Auteur: Fontaine
+Catégorie: Systemes
+
+Description:
+Maîtrisez l'administration de serveurs Linux. Configuration, sécurité, scripts bash, et gestion de services pour des infrastructures professionnelles.

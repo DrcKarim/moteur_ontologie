@@ -1,0 +1,6 @@
+Titre: Cybersécurité Avancée
+Auteur: Bernard
+Catégorie: Cybersecurite
+
+Description:
+Protégez vos systèmes contre les cyberattaques modernes. Ce livre couvre le pentesting, la cryptographie, et les meilleures pratiques de sécurité informatique.

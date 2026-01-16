@@ -1,0 +1,6 @@
+Titre: Python pour Débutants
+Auteur: Dubois
+Catégorie: Programmation
+
+Description:
+Apprenez Python de zéro avec des exercices progressifs. De la syntaxe de base à la programmation orientée objet, tout pour bien débuter.
